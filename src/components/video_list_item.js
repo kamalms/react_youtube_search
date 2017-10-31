@@ -6,7 +6,14 @@ const VideoListItem = function(props){
     //console.log("TEST props", props.video);
     const imageUrl = props.video.snippet.thumbnails.default.url;
 
-return <li className="list-group-item">
+return <li onClick = { () => 
+    {
+    console.log('first emit comes here');
+    props.onVideoSelect(props.video)
+    }
+    
+
+} className="list-group-item">
     <div className="video-list media">
 
     <div className="media-left">
